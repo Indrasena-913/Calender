@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+.calender {
+	display: flex;
+	flex-direction: column;
+	height: 600px;
+	width: 520px;
+	/* border: 1px solid #000; */
+	box-shadow: 2px 2px 10px 4px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 16px;
+	overflow: hidden;
+}
+header {
+	/* display: grid; */
+	/* grid-template-columns: repeat(auto-fit, 100px); */
+	text-align: center;
+	align-items: center;
+	background-color: blueviolet;
+	color: aliceblue;
+	position: relative;
+	margin: -20px -20px 10px -20px;
+}
+.calender .weekdays,
+.calender .weekdates {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+.calender .weekdays > p {
+	flex: 0 0 50px;
+	text-align: center;
+}
+.calender .weekdates .date {
+	flex: 0 0 50px;
+	text-align: center;
+}
+.calender .weekdates {
+	flex-wrap: wrap;
+}
+.today {
+	position: relative;
+	color: crimson;
+	font-weight: 1000;
+}
+.today::before {
+	content: "";
+	border: 1px solid;
+	position: absolute;
+	height: 280%;
+	width: 100%;
+	border-radius: 200px;
+	top: -16px;
+	left: -1px;
+	color: blue;
+}
+#full-date {
+	font-weight: bolder;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	margin-top: 180px;
+}
+.nextbutton {
+	background: transparent;
+	font-size: 30px;
+	color: aliceblue;
+	font-weight: bolder;
+	position: absolute;
+	right: 19px;
+	top: 30px;
+	border: none;
+}
+.prevbutton {
+	background: transparent;
+	font-size: larger;
+	color: aliceblue;
+	font-weight: bolder;
+	position: absolute;
+	left: 19px;
+	border: none;
+
+	font-size: 30px;
+
+	top: 35px;
+}
